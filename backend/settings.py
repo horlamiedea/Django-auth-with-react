@@ -197,3 +197,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 django_heroku.settings(locals())
 if os.getcwd() == '/app':
     DEBUG = False
+
+
+STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
