@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'sc%oco$+(3$z$at=z4j)#l-+ym)+_b11389mdt2^12m$bf63%@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ethnostest.herokuapp.com']
 
 
 # Application definition
@@ -193,6 +194,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 
-
+django_heroku.settings(locals())
 if os.getcwd() == '/app':
     DEBUG = False
